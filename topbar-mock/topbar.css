@@ -1,0 +1,108 @@
+#documenter-ext-navbar {
+    background-color: rgb(245, 245, 245);
+    border-bottom: 1px solid #dbdbdb;
+    height: 4rem;
+
+    display: flex;
+}
+
+#documenter-ext-navbar ul {
+    display: flex;
+}
+
+#documenter-ext-navbar > ul > li,
+#documenter-ext-navbar > a.brand {
+    padding: 0.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#documenter-ext-navbar-right-items {
+    display: flex;
+    margin: 0;
+    margin-left: auto;
+}
+
+#documenter-ext-navbar-right-items * {
+padding: 1rem;
+font-size: 1.5rem;
+}
+
+#documenter-main {
+    display: flex;
+    /* background-color: rgb(245, 245, 245); */
+}
+
+#documenter .d-sidebar {
+
+}
+
+#documenter .d-sidebar > .d-sidebar-nav {
+    position: sticky;
+    top: 0;
+    height: initial;
+}
+
+#documenter-sidebar-left {
+    background-color: rgb(245, 245, 245);
+    border-right: 1px solid #dbdbdb;
+}
+
+#documenter-sidebar-left .docs-sidebar {
+    border: none !important;
+}
+
+#documenter-sidebar-right {
+    background-color: #fff;
+}
+
+#documenter-sidebar-right nav {
+    background-color: initial !important;
+    min-width: 5rem;
+    width: initial !important;
+    height: 10rem;
+    border-left: 1px solid black;
+    padding-left: 1rem !important;
+    margin-top: 5rem;
+    border-right: none !important;
+}
+
+#documenter-body {
+    margin-left: 0 !important;
+    padding-left: 3rem;
+    background-color: #ffffff;
+}
+
+#documenter-sidebar-right {
+    font-size: .95rem;
+    padding-left: 1rem;
+    /* padding-top: 1rem !important; */
+    /* margin-top: 1rem !important; */
+}
+
+#documenter-sidebar-right > nav > div {
+    line-height: 1.5;
+    font-size: 1em !important;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#documenter-sidebar-right ul.docs-menu {
+    padding-bottom: initial !important;
+}
+
+#documenter-sidebar-right .tocitem {
+    background: none !important;
+    font-weight: normal !important;
+}
+
+#documenter-sidebar-right .tocitem::before {
+    content: "⚬";
+    margin-right: 0.4em;
+}
+
+#documenter-sidebar-right .tocitem:hover {
+    background-color: rgb(245, 245, 245) !important;
+}
