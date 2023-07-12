@@ -46,19 +46,41 @@
     data-theme-name="documenter-light" data-theme-primary />
   <link rel="stylesheet" type="text/css" href="topbar.css" />
   <script src="assets/themeswap.js"></script>
+  <script src="assets/multidoc.js"></script>
   <link href="assets/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 
 <body>
   <div id="documenter">
     <nav id="documenter-ext-navbar">
-      <a class="brand">JuliaDocs</a>
+      <!-- <a class="brand">JuliaDocs</a> -->
       <ul>
-        <li><a class="link">Documenter</a></li>
-        <li><a class="link">Documenter</a></li>
-        <li>
-          <a class="link">Documenter</a>
-          <ul class="dropdown"></ul>
+        <li><a class="d-navbar-item">Documenter</a></li>
+        <li class="d-dropdown">
+          <span class="d-navbar-item">Tools & Extras</span>
+          <ul class="d-dropdown">
+            <li><a>DocumenterCitations</a></li>
+            <li><a>DocumenterMermaid</a></li>
+          </ul>
+        </li>
+        <li class="d-megadropdown">
+          <span class="d-navbar-item">Documenter Ecosystem</span>
+          <ul class="d-megadropdown">
+            <li>
+              <span>Core packages</span>
+              <ul>
+                <li><a>Documenter</a></li>
+                <li><a>DocumenterTools</a></li>
+              </ul>
+            </li>
+            <li>
+              <span>Extensions</span>
+              <ul>
+                <li><a>DocumenterCitations</a></li>
+                <li><a>DocumenterMermaid</a></li>
+              </ul>
+            </li>
+          </ul>
         </li>
         </a>
       </ul>

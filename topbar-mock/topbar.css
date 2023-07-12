@@ -1,22 +1,47 @@
 #documenter-ext-navbar {
     background-color: rgb(245, 245, 245);
     border-bottom: 1px solid #dbdbdb;
-    height: 4rem;
-
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: flex;
 }
 
-#documenter-ext-navbar ul {
+#documenter-ext-navbar a, #documenter-ext-navbar span {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: black;
+}
+
+#documenter-ext-navbar ul.d-megadropdown span {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+#documenter-ext-navbar > ul {
     display: flex;
 }
 
-#documenter-ext-navbar > ul > li,
-#documenter-ext-navbar > a.brand {
-    padding: 0.5rem;
+#documenter-ext-navbar > ul > li {
+    height: 3rem;
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 1.1rem;
-    font-weight: bold;
+}
+
+#documenter-ext-navbar > ul > li {
+    display: flex;
+}
+
+#documenter-ext-navbar > ul > li > .d-navbar-item {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+
+    padding: 0 1rem;
+}
+
+#documenter-ext-navbar > ul > li:hover {
+    background-color: rgb(200,200,200);
 }
 
 #documenter-ext-navbar-right-items {
@@ -26,17 +51,96 @@
 }
 
 #documenter-ext-navbar-right-items * {
-padding: 1rem;
-font-size: 1.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+#documenter-ext-navbar ul.d-dropdown {
+    position: absolute;
+    top: 2.8rem;
+    /* top: 5rem; */
+    /* left: 12rem; */
+    z-index: 10;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #dbdbdb;
+    /* margin-top: 0.3rem; */
+    padding: 0.5rem 0;
+    box-shadow: 0rem 0.2rem 0.2rem #bbb;
+}
+
+#documenter-ext-navbar ul.d-megadropdown ul {
+    display: block;
+}
+
+#documenter-ext-navbar ul.d-dropdown > .d-navbar-item::after {
+    content: "";
+    margin-left: 5px;
+
+    /* caret down */
+    display: inline-block;
+    vertical-align: 0.2em;
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+#documenter-ext-navbar ul.d-dropdown.d-expanded > .d-navbar-item::after {
+    /* caret up */
+    border-top: 0;
+    border-bottom: .3em solid;
+}
+
+#documenter-ext-navbar ul.d-megadropdown {
+    position: absolute;
+    left: 0;
+    /* We need the -1px is there so that the megadropdown would cover the bottom border of
+    the navbar. Otherwise, the hover gets disabled if you move over the border. */
+    top: calc(3rem - 1px);
+    width: 100vw;
+
+    z-index: 10;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #dbdbdb;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+
+    padding: 1rem;
+
+    box-shadow: 0rem 0.2rem 0.2rem #bbb;
+}
+
+#documenter-ext-navbar > ul > li.d-dropdown ul.d-dropdown,
+#documenter-ext-navbar > ul > li.d-megadropdown ul.d-megadropdown {
+    transition: opacity 0.2s 0.5s ease, visibility 0.2s 0.5s;
+}
+
+#documenter-ext-navbar > ul > li.d-dropdown:hover ul.d-dropdown,
+#documenter-ext-navbar > ul > li.d-megadropdown:hover ul.d-megadropdown {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s 0s ease, visibility 0.2s 0s;
+    z-index: 15;
+}
+
+#documenter ul.d-dropdown,
+#documenter ul.d-megadropdown {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#documenter-ext-navbar ul.d-dropdown li,
+#documenter-ext-navbar ul.d-megadropdown > li li {
+    padding: 0.5rem 1rem;
+}
+
+#documenter-ext-navbar ul.d-dropdown li:hover,
+#documenter-ext-navbar ul.d-megadropdown ul > li:hover {
+    background-color: rgb(200,200,200);
 }
 
 #documenter-main {
     display: flex;
-    /* background-color: rgb(245, 245, 245); */
-}
-
-#documenter .d-sidebar {
-
 }
 
 #documenter .d-sidebar > .d-sidebar-nav {
@@ -76,26 +180,26 @@ font-size: 1.5rem;
 }
 
 #documenter-sidebar-right {
-    font-size: .95rem;
     padding-left: 1rem;
-    /* padding-top: 1rem !important; */
-    /* margin-top: 1rem !important; */
 }
 
 #documenter-sidebar-right > nav > div {
     line-height: 1.5;
-    font-size: 1em !important;
+    font-size: 0.85rem;
     font-weight: bold;
     margin-top: 1rem;
 }
 
 #documenter-sidebar-right ul.docs-menu {
     padding-bottom: initial !important;
+    padding-top: 0.3rem;
 }
 
 #documenter-sidebar-right .tocitem {
     background: none !important;
     font-weight: normal !important;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.3rem !important;
 }
 
 #documenter-sidebar-right .tocitem::before {
