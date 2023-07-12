@@ -311,8 +311,12 @@
             </svg></button>
     </nav>
 
+    <div style="height: 1rem; background-color: #282f2f; font-size: 0.65rem; color:white; border-bottom: 1px solid #5e6d6f; text-align: center;">
+        Note: mirrored documentation &mdash; the canonical home for the Ferrite.jl documentation is at <a>https://ferrite-fem.github.io/Ferrite.jl/</a>
+    </div>
+
     <iframe
-    style="position:fixed; top:var(--navbar-height); left:0; bottom:0; right:0; width: 100vw; height: calc(100vh - var(--navbar-height)); border:none; margin:0; padding:0;"
+    style="position:fixed; top:calc(var(--navbar-height) + 1rem); left:0; bottom:0; right:0; width: 100vw; height: calc(100vh - var(--navbar-height) - 1rem); border:none; margin:0; padding:0;"
     id="external-documenter" src="https://ferrite-fem.github.io/Ferrite.jl/stable/"></iframe>
 </body>
 
