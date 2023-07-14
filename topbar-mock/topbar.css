@@ -358,11 +358,16 @@ header.docs-navbar-menu ul > li {
     right: 2rem;
     bottom: 2rem;
     min-width: 15rem;
+    max-width: 25rem;
     min-height: 10rem;
     border: 1px solid black;
     background-color: antiquewhite;
-
     padding: 1rem;
+}
+
+#debugger > * {
+    display: block;
+    margin-bottom: 0.3rem;
 }
 
 .disabled {
