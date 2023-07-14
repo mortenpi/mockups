@@ -103,6 +103,10 @@ body.debug-github-right {
     padding: 0 1rem;
 }
 
+.d-top-navbar > ul > li.is-active > .d-navbar-item {
+    text-decoration: underline;
+}
+
 .d-top-navbar > ul > li:hover {
     background-color: rgb(200,200,200);
 }
